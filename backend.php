@@ -1,14 +1,13 @@
 <?php
-$host = 'localhost';
-$db = 'triage_db';
-$user = 'dbuser';
-$pass = 'dbpass';
+$dsn = 'mysql:host=localhost;dbname=triage_db';
+$dbusername = 'root';
+$dbpassword = '';
 
 try {
-    $pdo = new PDO("pgsql:host=$host;dbname=$db", $user, $pass);
+    $pdo = new PDO($dsn, $dbusername, $dbpassword);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    die("Could not connect to the database: " . $e->getMessage());
+    echo "Could not connect to the database: " . $e->getMessage();
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

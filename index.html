@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Triage Application</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Hospital Triage Application</h1>
-        <form id="triage-form">
+        <form id="triage-form" method="post">
             <label for="patient-name">Patient Name:</label>
-            <input type="text" id="patient-name" name="patient-name" required>
+            <input type="text" id="patient-name" name="patient-name">
             <label for="severity">Severity:</label>
-            <select id="severity" name="severity" required>
+            <select id="severity" name="severity">
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
                 <option value="high">High</option>
@@ -22,6 +22,6 @@
         </form>
         <div id="patient-list"></div>
     </div>
-    <script src="js/scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
